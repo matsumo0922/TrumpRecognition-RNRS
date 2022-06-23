@@ -32,6 +32,8 @@ class Conv(nn.Module):
         if self.relu is None:
             return self.norm(self.conv(x))
 
+        return self.relu(self.norm(self.conv(x)))
+
 
 class StemConv(nn.Module):
     def __init__(self, in_ch, stem_width, is_deep=False):
@@ -90,7 +92,7 @@ class DownsampleBlock(nn.Module):
         super(DownsampleBlock, self).__init__()
 
         self.downsample = nn.Sequential(
-            nn.AvgPool2d(kernel_size=2, stride=stride, ceil_mode=True, count_include_pad=False),
+            nn.Identity() if stride == 1 else nn.AvgPool2d(kernel_size=2, stride=stride, ceil_mode=True, count_include_pad=False),
             nn.Conv2d(in_ch, out_ch, kernel_size=kernel_size, stride=1, padding=0, bias=False),
             norm(out_ch)
         )
@@ -174,6 +176,7 @@ class ResNetRs(nn.Module):
         x = self.conv3_x(x)
         x = self.conv4_x(x)
         x = self.conv5_x(x)
+        x = self.avg_pooling(x)
 
         x = x.flatten(1, -1)
 
@@ -186,9 +189,6 @@ class ResNetRs(nn.Module):
 
     def get_layer(self, diff_block: Type[BottleneckBlock], n_blocks, input_channels, output_channel, stride, is_se_block=True, reduction_ratio=0.2):
         layer = list()
-
-        downsample = DownsampleBlock(input_channels, output_channel * 4, kernel_size=1, stride=stride)
-        layer.append(diff_block(input_channels, output_channel, stride=stride, downsample=downsample, is_se_block=is_se_block, reduction_ratio=reduction_ratio))
 
         for i in range(n_blocks):
             stride = stride if i == 0 else 1

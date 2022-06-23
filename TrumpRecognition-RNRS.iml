@@ -51,7 +51,6 @@
       <excludeFolder url="file://$MODULE_DIR$/dataset/train/13D" />
       <excludeFolder url="file://$MODULE_DIR$/dataset/train/13H" />
       <excludeFolder url="file://$MODULE_DIR$/dataset/train/13S" />
-      <excludeFolder url="file://$MODULE_DIR$/dataset/valid" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.10 (nn)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
