@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="724cd66a-ed71-481c-b1ac-ac60ef7443d1" name="変更" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PrintLog.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RNRS.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TrumpRecognition-RNRS.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-0 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-0 (3).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-10 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-116.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-117.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-118.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-119.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-12 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-120.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-121.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-122.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-123.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-124.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-125.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-126.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-127.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-128.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-13 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-14 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-15 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-17 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-19 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-2 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-20 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-21 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-22 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-23 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-24 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-25 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-26 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-27 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-28 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-29 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-30 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-31 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11C/11C-DM-4 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-AO-0.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-AO-1.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-0 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-10 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-100.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-101.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-102.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-103.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-104.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-105.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-106.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-107.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-108.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-109.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-11 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-112.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-113.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-114.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-115.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-116.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-117.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-118.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-119.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-12 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-120.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-121.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-122.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-123.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-124.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-125.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-126.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-127.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-128.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-15 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-16 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-18 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-19 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-20 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-21 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-22 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-23 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-24 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-25 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-26 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-27 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-29 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-30 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-31 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-36.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-37.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-39.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-41.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-42.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-43.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-44.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-45.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-47.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-48.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-50.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-52.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-53.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-54.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-55.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-56.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-57.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-58.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-59.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-60.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-61.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-62.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-63.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-64.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-65.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-66.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-67.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-68.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-69.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-70.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-71.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-72.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-73.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-74.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-75.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-76.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-77.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-78.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-79.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-80.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-81.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-82.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-83.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-84.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-85.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-86.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-87.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-88.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-89.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-90.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-91.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-92.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-93.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-94.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-95.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-96.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-97.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-98.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-DM-99.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-ES-2.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-37.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-39.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-42.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-44.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-45.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-47.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11D/11D-JP-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-AO-0.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-AO-1.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-AO-2.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-0 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-10 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-100.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-101.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-102.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-103.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-104.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-105.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-106.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-107.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-108.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-109.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-11 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-110.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-112.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-113.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-114.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-115.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-116.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-117.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-118.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-119.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-120.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-121.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-122.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-123.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-124.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-125.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-126.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-127.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-13 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-14 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-15 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-16 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-17 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-18 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-19 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-20 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-21 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-22 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-23 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-24 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-25 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-26 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-27 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-28 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-29 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-30 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-32 (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-36.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-37.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-39.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-41.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-42.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-43.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-44.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-45.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-47.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-48.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-50.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-52.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-53.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-54.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-55.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-56.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-57.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-58.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-59.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-60.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-61.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-62.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-63.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-64.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-65.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-66.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-67.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-68.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-69.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-70.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-71.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-72.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-73.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-74.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-75.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-76.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-77.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-78.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-79.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-80.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-81.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-82.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-83.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-84.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-85.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-86.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-87.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-88.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-89.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-90.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-91.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-92.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-93.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-94.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-95.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-96.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-97.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-98.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-DM-99.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-36.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-37.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-41.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-JP-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11H/11H-YS-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-AO-1.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-0.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-0.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-30.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-31.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-32.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-33.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-34.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-35.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-36.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-37.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-38.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-39.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-40.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-41.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-42.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-43.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-44.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-45.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-46.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-47.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-48.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-49.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-50.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-51.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-52.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-53.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-54.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-55.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-56.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-57.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-58.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-59.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-60.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-61.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-62.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-63.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-64.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-65.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-DM-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-ES-2.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dataset/train/11S/11S-YS-3.jpg" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2AxsVYltNU7ZLH5Et26GP4s6CXh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "E:/IntelliJ/Projects/KCS/TrumpRecognition-RNRS",
+    "project.structure.last.edited": "プロジェクト",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.sourceCode.Python"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\IntelliJ\Projects\KCS\TrumpRecognition-RNRS" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="アプリケーションレベル" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="デフォルトタスク">
+      <changelist id="724cd66a-ed71-481c-b1ac-ac60ef7443d1" name="変更" comment="" />
+      <created>1655962595217</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655962595217</updated>
+      <workItem from="1655962596476" duration="20996000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
