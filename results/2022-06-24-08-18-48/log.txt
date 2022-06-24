@@ -1,0 +1,7 @@
+[2022/06/24 08:18:48] train data: 9953, valid data: 1472
+[2022/06/24 08:21:11] Epoch [1/75] loss: 4.01915, acc: 0.01698, valid loss: 4.03269, valid acc: 0.02514 [ETA: 02:56:27]
+[2022/06/24 08:23:34] Epoch [2/75] loss: 4.00258, acc: 0.02030, valid loss: 4.02739, valid acc: 0.01223 [ETA: 02:54:16]
+[2022/06/24 08:25:55] Epoch [3/75] loss: 4.00188, acc: 0.01758, valid loss: 4.02736, valid acc: 0.02514 [ETA: 02:50:45]
+[2022/06/24 08:28:19] Epoch [4/75] loss: 4.00045, acc: 0.01808, valid loss: 4.02122, valid acc: 0.02242 [ETA: 02:48:59]
+[2022/06/24 08:30:41] Epoch [5/75] loss: 3.99059, acc: 0.01879, valid loss: 4.02403, valid acc: 0.02446 [ETA: 02:46:15]
+[2022/06/24 08:33:03] Epoch [6/75] loss: 3.99409, acc: 0.02030, valid loss: 4.01787, valid acc: 0.02514 [ETA: 02:43:48]
