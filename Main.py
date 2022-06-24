@@ -32,7 +32,7 @@ IMAGE_SIZE = (224, 224)
 BATCH_SIZE = 50
 LEARNING_RATE = 0.0001
 MOMENTUM = 0.9
-EPOCHS = 75
+EPOCHS = 150
 N_OUTPUT = 52
 
 
@@ -207,7 +207,7 @@ def train_model(
         net.train()
 
         # DetaLoaderが返すデータ数分繰り返す
-        for inputs, labels in tqdm(train_loader):
+        for inputs, labels in tqdm(train_loader, desc=f"Epoch [{epoch + 1}/{EPOCHS}] [TRAIN]"):
             num_trained += len(labels)
 
             # GPUに送る
@@ -240,7 +240,7 @@ def train_model(
         # モデルを推論モードにする（勾配自動計算off）
         net.eval()
 
-        for valid_inputs, valid_labels in valid_loader:
+        for valid_inputs, valid_labels in tqdm(valid_loader, desc=f"Epoch [{epoch + 1}/{EPOCHS}] [VALID]"):
             num_tested += len(valid_labels)
 
             valid_inputs = valid_inputs.to(device)
@@ -284,9 +284,9 @@ def train_model(
 
         # 5Epochに一回、現状のlossカーブ,acc,重みファイルを出力する
         if (epoch + 1) % 5 == 0 and (epoch + 1) != EPOCHS:
-            save_weight(outputs_path, epoch, net)
-            show_loss_carve(outputs_path, epoch, history)
-            show_accuracy_graph(outputs_path, epoch, history)
+            save_weight(outputs_path, epoch + 1, net)
+            show_loss_carve(outputs_path, epoch + 1, history)
+            show_accuracy_graph(outputs_path, epoch + 1, history)
 
     return history
 
@@ -524,11 +524,11 @@ def predict():
 
         # 推論して結果を出力する
         result = get_predict(image_path, net, device)
-        rate_sum = sum(list(map(lambda x: x[1], result)))
+        rate_sum = sum(list(map(lambda x: x[1] + abs(result[-1][1]), result)))
         take_list = list(map(lambda x: (CATS[x[0]], x[1]), result[:7]))
 
         for trump, rate in take_list:
-            print(f"{trump}, {(rate / rate_sum) * 100}%, {rate}")
+            print(f"{trump}, {(((rate + abs(result[-1][1])) / rate_sum) * 100):.3f}%, {rate:.5f}")
 
 
 def info():

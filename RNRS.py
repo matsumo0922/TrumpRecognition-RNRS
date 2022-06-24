@@ -150,22 +150,22 @@ class DropPath(nn.Module):
 
 
 class ResNetRs(nn.Module):
-    def __init__(self, n_classes):
+    def __init__(self, n_classes, dropout_rate=0.25, reduction_ratio=0.25, stochastic_depth_ratio=0.0):
         super(ResNetRs, self).__init__()
 
-        blocks = [3, 4, 6, 3]
+        blocks = [3, 4, 23, 3]
         input_channels = [64, 256, 512, 1024]
         output_channels = [64, 128, 256, 512]
 
-        self.dropout_ratio = 0.0
-        self.stochastic_depth_ratio = 0.0
+        self.dropout_rate = dropout_rate
+        self.stochastic_depth_ratio = stochastic_depth_ratio
         self.total_blocks = sum(blocks)
 
         self.conv1 = StemConv(3, 32, is_deep=True)
-        self.conv2_x = self.get_layer(BottleneckBlock, blocks[0], input_channels[0], output_channels[0], stride=1)
-        self.conv3_x = self.get_layer(BottleneckBlock, blocks[1], input_channels[1], output_channels[1], stride=2)
-        self.conv4_x = self.get_layer(BottleneckBlock, blocks[2], input_channels[2], output_channels[2], stride=2)
-        self.conv5_x = self.get_layer(BottleneckBlock, blocks[3], input_channels[3], output_channels[3], stride=1)
+        self.conv2_x = self.get_layer(BottleneckBlock, blocks[0], input_channels[0], output_channels[0], stride=1, reduction_ratio=reduction_ratio)
+        self.conv3_x = self.get_layer(BottleneckBlock, blocks[1], input_channels[1], output_channels[1], stride=2, reduction_ratio=reduction_ratio)
+        self.conv4_x = self.get_layer(BottleneckBlock, blocks[2], input_channels[2], output_channels[2], stride=2, reduction_ratio=reduction_ratio)
+        self.conv5_x = self.get_layer(BottleneckBlock, blocks[3], input_channels[3], output_channels[3], stride=1, reduction_ratio=reduction_ratio)
 
         self.avg_pooling = nn.AdaptiveAvgPool2d((1, 1))
         self.linear = nn.Linear(512 * 4, n_classes)
@@ -180,14 +180,14 @@ class ResNetRs(nn.Module):
 
         x = x.flatten(1, -1)
 
-        if self.dropout_ratio > 0.:
-            x = nn.functional.dropout(x, p=self.dropout_ratio, training=self.training)
+        if self.dropout_rate > 0.:
+            x = nn.functional.dropout(x, p=self.dropout_rate, training=self.training)
 
         x = self.linear(x)
 
         return x
 
-    def get_layer(self, diff_block: Type[BottleneckBlock], n_blocks, input_channels, output_channel, stride, is_se_block=True, reduction_ratio=0.2):
+    def get_layer(self, diff_block: Type[BottleneckBlock], n_blocks, input_channels, output_channel, stride, is_se_block=True, reduction_ratio=0.25):
         layer = list()
 
         for i in range(n_blocks):
