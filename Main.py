@@ -29,8 +29,8 @@ CATS = ['10C', '10D', '10H', '10S', '11C', '11D', '11H', '11S', '12C', '12D', '1
 
 # ハイパーパラメータなどの定数地
 IMAGE_SIZE = (224, 224)
-BATCH_SIZE = 50
-LEARNING_RATE = 0.0001
+BATCH_SIZE = 64
+LEARNING_RATE = 0.001
 MOMENTUM = 0.9
 EPOCHS = 150
 N_OUTPUT = 52
@@ -86,12 +86,11 @@ def get_transform(is_train) -> Compose:
             transforms.Resize(IMAGE_SIZE),
             transforms.ToTensor(),
             transforms.Normalize(0.5, 0.5),
-            transforms.RandomErasing(0.5, scale=(0.02, 0.3), ratio=(0.3, 0.3)),
-            transforms.RandomHorizontalFlip(0.4),
+            transforms.RandomErasing(0.4, scale=(0.02, 0.3), ratio=(0.3, 0.3)),
+            # transforms.RandomHorizontalFlip(0.4),
             transforms.RandomVerticalFlip(0.4),
-            transforms.RandomApply([transforms.GaussianBlur(3)], 0.2),
             # transforms.RandomApply([transforms.Grayscale()], 0.2),
-            transforms.RandomApply([transforms.ColorJitter(brightness=0.6, contrast=0.6)], 0.2),
+            transforms.RandomApply([transforms.ColorJitter(brightness=0.5, contrast=0.5, saturation=0.5, hue=0.5)], 0.2),
         ])
     else:
         return transforms.Compose([
@@ -276,7 +275,10 @@ def train_model(
         message += f"loss: {train_loss:.5f}, acc: {train_acc:.5f}, valid loss: {valid_loss:.5f}, valid acc: {valid_acc:.5f} "
         message += f"[ETA: {str(eta[0]).zfill(2)}:{str(eta[1]).zfill(2)}:{str(eta[2]).zfill(2)}]"
 
-        logger.println(message)
+        print(message)
+        logger.log(message)
+
+        time.sleep(1)
 
         # このEpochの結果を収める
         items = np.array([epoch, train_loss, train_acc, valid_loss, valid_acc])
