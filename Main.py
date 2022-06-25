@@ -11,6 +11,8 @@ import torch.cuda.amp as amp
 import torch.nn as nn
 import torch.optim as optim
 import torchvision.transforms as transforms
+import ttach as tta
+
 from PIL import Image
 from torch.utils.data import DataLoader
 from torchinfo import summary
@@ -29,10 +31,10 @@ CATS = ['10C', '10D', '10H', '10S', '11C', '11D', '11H', '11S', '12C', '12D', '1
 
 # ハイパーパラメータなどの定数地
 IMAGE_SIZE = (224, 224)
-BATCH_SIZE = 64
-LEARNING_RATE = 0.001
+BATCH_SIZE = 50
+LEARNING_RATE = 0.05
 MOMENTUM = 0.9
-EPOCHS = 150
+EPOCHS = 100
 N_OUTPUT = 52
 
 
@@ -100,6 +102,13 @@ def get_transform(is_train) -> Compose:
         ])
 
 
+def get_tta_transform():
+    return tta.Compose([
+        tta.VerticalFlip(),
+        # tta.Multiply(factors=[0.9, 1, 1.1])
+    ])
+
+
 def get_datasets():
     """
     データセットを読み込む
@@ -165,6 +174,7 @@ def train_model(
         valid_loader: DataLoader,
         criterion: nn.CrossEntropyLoss,
         optimizer: optim.Optimizer,
+        scheduler: optim.lr_scheduler.MultiStepLR,
         device: torch.device,
         outputs_path: str,
         logger: PrintLog
@@ -180,6 +190,7 @@ def train_model(
     :param valid_loader: Valid用データローダー
     :param criterion: 損失関数
     :param optimizer: 最適化アルゴリズム
+    :param scheduler: 学習率減衰のスケジューラー
     :param device: 使用するデバイス
     :param outputs_path: lossカーブなどを出力するパス
     :param logger: 標準出力のログをとるクラス
@@ -192,8 +203,9 @@ def train_model(
     # Tensorコアを使用するためのクラス(AMP)
     scaler = amp.GradScaler()
 
-    history = np.zeros((0, 5))
     net.to(device)
+    history = np.zeros((0, 5))
+    # net = tta.ClassificationTTAWrapper(net.to(device), get_tta_transform())
 
     # EPOCHS回繰り返す
     for epoch in range(EPOCHS):
@@ -262,6 +274,9 @@ def train_model(
         train_loss *= (BATCH_SIZE / num_trained)
         valid_loss *= (BATCH_SIZE / num_tested)
 
+        # Schedulerのエポックカウントを進める
+        scheduler.step()
+
         # このEpochが終了した時間
         end_time = time.perf_counter()
 
@@ -272,7 +287,7 @@ def train_model(
         eta = get_time_from_sec((elapsed_time / (epoch + 1)) * (EPOCHS - (epoch + 1)))
 
         message = f"Epoch [{epoch + 1}/{EPOCHS}] "
-        message += f"loss: {train_loss:.5f}, acc: {train_acc:.5f}, valid loss: {valid_loss:.5f}, valid acc: {valid_acc:.5f} "
+        message += f"loss: {train_loss:.5f}, acc: {train_acc:.5f}, valid loss: {valid_loss:.5f}, valid acc: {valid_acc:.5f} lr: {scheduler.get_last_lr()[0]} "
         message += f"[ETA: {str(eta[0]).zfill(2)}:{str(eta[1]).zfill(2)}:{str(eta[2]).zfill(2)}]"
 
         print(message)
@@ -362,7 +377,7 @@ def show_result(net: ResNetRs, valid_loader: DataLoader, device, parent_path):
 
     plt.figure(figsize=(21, 15))
 
-    for index in range(50):
+    for index in range(min(50, BATCH_SIZE)):
         ax = plt.subplot(5, 10, index + 1)
 
         answer_label = CATS[test_labels[index].item()]
@@ -483,9 +498,10 @@ def train():
     net = ResNetRs(N_OUTPUT)
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.SGD(net.parameters(), lr=LEARNING_RATE, momentum=MOMENTUM)
+    scheduler = optim.lr_scheduler.MultiStepLR(optimizer, [int(EPOCHS * 0.5), int(EPOCHS * 0.75), int(EPOCHS * 0.9)], gamma=0.2)
 
     # モデルの学習を実行する
-    history = train_model(net, train_loader, valid_loader, criterion, optimizer, device, result_path, log)
+    history = train_model(net, train_loader, valid_loader, criterion, optimizer, scheduler, device, result_path, log)
 
     # lossカーブ,accカーブ,50件の推論結果,重みファイルを出力する
     save_weight(result_path, "finish", net)
@@ -535,18 +551,12 @@ def predict():
 
 def info():
     """
-    モデルの構造、全結合層に入力されるノード数を出力する
+    モデルの構造を出力する
     """
 
     # モデルを取得する
     device = get_device()
     net = ResNetRs(N_OUTPUT).to(device)
-
-    # 入力画像を模した疑似テンソルを構築する
-    tensor = torch.FloatTensor(1, 3, IMAGE_SIZE[0], IMAGE_SIZE[1]).to(device)
-
-    # 全結合層に入力されるノード数を出力する
-    print(net(tensor).to(device).shape)
 
     # モデルの構造を出力する
     print(summary(model=net, input_size=(BATCH_SIZE, 3, IMAGE_SIZE[0], IMAGE_SIZE[1])))

@@ -153,7 +153,7 @@ class ResNetRs(nn.Module):
     def __init__(self, n_classes, dropout_rate=0.25, reduction_ratio=0.25, stochastic_depth_ratio=0.0):
         super(ResNetRs, self).__init__()
 
-        blocks = [3, 4, 23, 3]
+        blocks = [3, 8, 36, 3]
         input_channels = [64, 256, 512, 1024]
         output_channels = [64, 128, 256, 512]
 
