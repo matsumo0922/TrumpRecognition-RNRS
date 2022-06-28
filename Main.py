@@ -32,9 +32,9 @@ CATS = ['10C', '10D', '10H', '10S', '11C', '11D', '11H', '11S', '12C', '12D', '1
 # ハイパーパラメータなどの定数地
 IMAGE_SIZE = (224, 224)
 BATCH_SIZE = 50
-LEARNING_RATE = 0.05
+LEARNING_RATE = 0.01
 MOMENTUM = 0.9
-EPOCHS = 100
+EPOCHS = 250
 N_OUTPUT = 52
 
 
@@ -72,6 +72,7 @@ def get_transform(is_train) -> Compose:
     Resize: リサイズ
     Normalize: 画像の正規化
     RandomErasing: ランダムで黒塗りする
+    RandomRotation: ランダムに回転する
     RandomHorizontalFlip: ランダムで水平反転する
     RandomVerticalFlip: ランダムで垂直反転する
     RandomApply: ランダムで以下のTransformを行う
@@ -88,11 +89,12 @@ def get_transform(is_train) -> Compose:
             transforms.Resize(IMAGE_SIZE),
             transforms.ToTensor(),
             transforms.Normalize(0.5, 0.5),
-            transforms.RandomErasing(0.4, scale=(0.02, 0.3), ratio=(0.3, 0.3)),
+            transforms.RandomErasing(0.3, scale=(0.02, 0.3), ratio=(0.3, 0.3)),
             # transforms.RandomHorizontalFlip(0.4),
-            transforms.RandomVerticalFlip(0.4),
+            # transforms.RandomVerticalFlip(0.4),
             # transforms.RandomApply([transforms.Grayscale()], 0.2),
-            transforms.RandomApply([transforms.ColorJitter(brightness=0.5, contrast=0.5, saturation=0.5, hue=0.5)], 0.2),
+            transforms.RandomApply([transforms.RandomRotation(degrees=180)], 0.4),
+            transforms.RandomApply([transforms.ColorJitter(brightness=0.5, contrast=0.5, saturation=0.5, hue=0.5)], 0.3),
         ])
     else:
         return transforms.Compose([
@@ -287,7 +289,7 @@ def train_model(
         eta = get_time_from_sec((elapsed_time / (epoch + 1)) * (EPOCHS - (epoch + 1)))
 
         message = f"Epoch [{epoch + 1}/{EPOCHS}] "
-        message += f"loss: {train_loss:.5f}, acc: {train_acc:.5f}, valid loss: {valid_loss:.5f}, valid acc: {valid_acc:.5f} lr: {scheduler.get_last_lr()[0]} "
+        message += f"loss: {train_loss:.5f}, acc: {train_acc:.5f}, valid loss: {valid_loss:.5f}, valid acc: {valid_acc:.5f} lr: {scheduler.get_last_lr()[0]:.6f} "
         message += f"[ETA: {str(eta[0]).zfill(2)}:{str(eta[1]).zfill(2)}:{str(eta[2]).zfill(2)}]"
 
         print(message)
@@ -498,7 +500,7 @@ def train():
     net = ResNetRs(N_OUTPUT)
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.SGD(net.parameters(), lr=LEARNING_RATE, momentum=MOMENTUM)
-    scheduler = optim.lr_scheduler.MultiStepLR(optimizer, [int(EPOCHS * 0.5), int(EPOCHS * 0.75), int(EPOCHS * 0.9)], gamma=0.2)
+    scheduler = optim.lr_scheduler.MultiStepLR(optimizer, [int(EPOCHS * 0.3), int(EPOCHS * 0.6), int(EPOCHS * 0.75), int(EPOCHS * 0.9)], gamma=0.2)
 
     # モデルの学習を実行する
     history = train_model(net, train_loader, valid_loader, criterion, optimizer, scheduler, device, result_path, log)
