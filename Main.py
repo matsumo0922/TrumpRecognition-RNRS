@@ -1,8 +1,11 @@
 import datetime
+import math
 import os
+import re
 import time
 from typing import Tuple
 
+import cv2
 import matplotlib.pyplot as plt
 import numpy
 import numpy as np
@@ -21,15 +24,14 @@ from torchvision.transforms import Compose
 from tqdm import tqdm
 
 from PrintLog import PrintLog
-
-# ImageFolderで読み込んだ際にこの順番で並べられる
 from RNRS import ResNetRs
 
+# ImageFolderで読み込んだ際にこの順番で並べられる
 CATS = ['10C', '10D', '10H', '10S', '11C', '11D', '11H', '11S', '12C', '12D', '12H', '12S', '13C', '13D', '13H', '13S', '1C', '1D', '1H', '1S', '2C',
         '2D', '2H', '2S', '3C', '3D', '3H', '3S', '4C', '4D', '4H', '4S', '5C', '5D', '5H', '5S', '6C', '6D', '6H', '6S', '7C', '7D', '7H', '7S',
         '8C', '8D', '8H', '8S', '9C', '9D', '9H', '9S']
 
-# ハイパーパラメータなどの定数地
+# ハイパーパラメータなどの定数値
 IMAGE_SIZE = (224, 224)
 BATCH_SIZE = 50
 LEARNING_RATE = 0.01
@@ -289,7 +291,7 @@ def train_model(
         eta = get_time_from_sec((elapsed_time / (epoch + 1)) * (EPOCHS - (epoch + 1)))
 
         message = f"Epoch [{epoch + 1}/{EPOCHS}] "
-        message += f"loss: {train_loss:.5f}, acc: {train_acc:.5f}, valid loss: {valid_loss:.5f}, valid acc: {valid_acc:.5f} lr: {scheduler.get_last_lr()[0]:.6f} "
+        message += f"loss: {train_loss:.5f}, acc: {train_acc:.5f}, valid loss: {valid_loss:.5f}, valid acc: {valid_acc:.5f}, lr: {scheduler.get_last_lr()[0]:.6f} "
         message += f"[ETA: {str(eta[0]).zfill(2)}:{str(eta[1]).zfill(2)}:{str(eta[2]).zfill(2)}]"
 
         print(message)
@@ -442,6 +444,29 @@ def get_time_from_sec(sec) -> Tuple[int, int, int]:
     return h, m, s
 
 
+def get_predict_images(dir_path: str):
+    label_file = open(os.path.join(dir_path, "label.txt"), "r", encoding="UTF-8")
+    label_data = label_file.read().split("\n")
+
+    label_data = list(map(lambda x: x.split(), label_data))
+    label_data = list(map(lambda x: (os.path.join(dir_path, x[0] + ".jpeg"), x[1]), label_data))
+
+    result_data = list()
+
+    for path, label in label_data:
+        if os.path.exists(path):
+            trump_number = "".join(re.findall(r"\d+", label))
+            trump_mark = "".join(re.findall(r"\D+", label))
+
+            print(f"[{trump_number + trump_mark.upper()}] {path}")
+
+            result_data.append((int(trump_number), trump_mark.upper(), path))
+        else:
+            print(f"Error: Don't exist file. [{path}]")
+
+    return result_data
+
+
 def get_predict(path: str, net: ResNetRs, device):
     """
     学習済みモデルを使用して任意の画像を推論する
@@ -499,7 +524,7 @@ def train():
     # モデル,損失関数,最適化アルゴリズムをインスタンス化する
     net = ResNetRs(N_OUTPUT)
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.SGD(net.parameters(), lr=LEARNING_RATE, momentum=MOMENTUM)
+    optimizer = optim.RAdam(net.parameters(), lr=LEARNING_RATE)
     scheduler = optim.lr_scheduler.MultiStepLR(optimizer, [int(EPOCHS * 0.3), int(EPOCHS * 0.6), int(EPOCHS * 0.75), int(EPOCHS * 0.9)], gamma=0.2)
 
     # モデルの学習を実行する
@@ -512,7 +537,7 @@ def train():
     show_result(net, valid_loader, device, result_path)
 
 
-def predict():
+def predict_test():
     """
     重みファイルを読み込み、学習済みモデルを再構築して任意の画像を推論する
     最初に重みファイルを読み込む, 以降は任意の画像のパスを入力する
@@ -542,13 +567,74 @@ def predict():
             print("Ended the process.")
             break
 
-        # 推論して結果を出力する
-        result = get_predict(image_path, net, device)
-        rate_sum = sum(list(map(lambda x: x[1] + abs(result[-1][1]), result)))
-        take_list = list(map(lambda x: (CATS[x[0]], x[1]), result[:7]))
+        # 入力されたパスがフォルダだった場合
+        if os.path.isdir(image_path):
 
-        for trump, rate in take_list:
-            print(f"{trump}, {(((rate + abs(result[-1][1])) / rate_sum) * 100):.3f}%, {rate:.5f}")
+            # フォルダ以下のファイルをすべて取得
+            file_list = os.listdir(image_path)
+            show_axis = math.ceil(math.sqrt(len(file_list)))
+
+            # Matplotlib出力準備
+            plt.figure(figsize=(21, 21))
+            plt.subplots_adjust(left=0.025, bottom=0.00, right=0.95, top=0.95, hspace=0.3)
+
+            # 各々の写真に対して推論を行う
+            for index, file in enumerate(file_list):
+                file_path = os.path.join(image_path, file)
+                trump = CATS[get_predict(file_path, net, device)[0][0]]
+
+                img = cv2.imread(file_path)
+                img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+                img = cv2.resize(img, (1000, 1000))
+
+                ax = plt.subplot(show_axis, show_axis, index + 1)
+                ax.set_title(trump, fontsize=28)
+                ax.set_axis_off()
+                plt.imshow(img)
+
+            plt.show()
+        else:
+            # 推論して結果を出力する
+            result = get_predict(image_path, net, device)
+            rate_sum = sum(list(map(lambda x: x[1] + abs(result[-1][1]), result)))
+            take_list = list(map(lambda x: (CATS[x[0]], x[1]), result[:7]))
+
+            for trump, rate in take_list:
+                print(f"{trump}, {(((rate + abs(result[-1][1])) / rate_sum) * 100):.3f}%, {rate:.5f}")
+
+
+def predict():
+    # 重みファイルのパスを取得する
+    print("Enter the path of the PTH file > ", end="")
+    pth_path = input().strip()
+
+    # 重みファイルを読み込み、学習済みのモデルを再構築する
+    device = get_device()
+    net = ResNetRs(N_OUTPUT)
+    net.load_state_dict(torch.load(pth_path))
+
+    # 推論したい任意の画像フォルダのパスを取得する
+    print("Enter the path of the image folder to predict > ", end="")
+    dir_path = input().strip()
+
+    image_dataset = get_predict_images(dir_path)
+    result_data = dict()
+
+    print(f"Load complete. [Size: {len(image_dataset)}]")
+
+    for number, mark, path in image_dataset:
+        predict_label = CATS[get_predict(path, net, device)[0][0]]
+        result = ("[OK]" if str(number) in predict_label else "[FAILED]") + f", {str(number) + mark}:{predict_label}"
+
+        print(f"{result}, {path}")
+
+        if str(number) in predict_label:
+            result_data[number] = 1 if result_data.get(number) is None else result_data.get(number) + 1
+
+    collect_rate = sum(result_data.values()) / len(image_dataset)
+    score = collect_rate * sum(list(map(lambda x: x[1] * math.log(x[1] * x[0]), result_data.items())))
+
+    print(f"Finish: Collect rate: {collect_rate:.5f}, Score: {score}")
 
 
 def info():
@@ -570,11 +656,13 @@ def main():
     推論モード, 学習モード, 情報モードを選択する
     """
 
-    print("Choose mode predict mode [P], train mode [T] or info mode [I]: > ", end="")
+    print("Choose mode predict[P], test-predict[PT], train[T] or info[I]: > ", end="")
     mode = input().strip()
 
     if mode.upper() == "P":
         predict()
+    elif mode.upper() == "PT":
+        predict_test()
     elif mode.upper() == "T":
         train()
     elif mode.upper() == "I":
